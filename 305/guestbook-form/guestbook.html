@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="styles/guestbook.css">
+
+    <title>Guest Book</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/gbFavicon1.png">
+
+</head>
+<body>
+<div class="container" id="main">
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center font-weight-bolder font-italic">Guests Book</h1>
+    <p class="lead text-center text-capitalize font-weight-bold">Please sign our guest book</p>
+    <hr class="my-0">
+</div><!--div-->
+
+<form id="guestbook-form" action="confirmation.php" method="post">
+    <fieldset class="form-group">
+        <legend>Your Inforamtion</legend>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName">
+            <span class="err" id="err-fname">
+                Please enter a first name
+            </span>
+        </div><!--div-->
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName">
+            <span class="err" id="err-lname">
+                Please enter a last name
+            </span>
+        </div><!--div-->
+        <div class="form-group">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" class="form-control" id="jobTitle" name="jobTitle" >
+            <span class="err" id="err-jtitle">
+                Please enter a job title
+            </span>
+        </div><!--div-->
+
+        <div class="form-group">
+            <label for="companyName">Company</label>
+            <input type="text" class="form-control" id="companyName" name="companyName" >
+            <span class="err" id="err-company">
+                Please enter a company name
+            </span>
+        </div><!--div-->
+        <div class="form-group">
+            <label for="linkedIn">LinkedIn</label>
+            <input type="text" id="linkedIn" name="linkedIn" >
+            <span class="err" id="err-linkedIn">
+                Please enter a LinkedIn Url
+            </span>
+        </div><!--div-->
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>Email address</legend>
+        <div class="form-inline">
+            <label for="emailAdd">Email:</label>
+            <input type="text" class="form-control" id="emailAdd"  name="emailAdd" placeholder="name@example.com">
+        </div><!--div-->
+        <span class="err" id="err-emailAdd">
+            Please enter a valid email address
+        </span>
+
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="add" name="add">
+            <label class="custom-control-label" for="add">Please add me to your mailing list</label>
+        </div><!--div-->
+        <span class="err" id="err-list">
+            Please select to be added to the mailing list
+        </span>
+        <div class="form-check" id="format">
+            <p>Choose an email format:</p>
+            <div class="form-check form-check-inline" id="html-block">
+                <input class="form-check-input" type="radio" name="format" id="html" value="html">
+                <label class="form-check-label" for="html">HTML</label>
+            </div><!--div-->
+            <div class="form-check form-check-inline" id="text-block">
+                <input class="form-check-input" type="radio" name="format" id="text" value="text">
+                <label class="form-check-label" for="text">Text</label>
+            </div><!--div-->
+            <br>
+            <span class="err" id="err-format">
+                Please choose an email format
+            </span>
+        </div><!--div-->
+        <div class="form-group" id="emailhtml-block">
+            <label for="emailhtml">HTML Format</label>
+            <textarea class="form-control" id="emailhtml" name="emailhtml" rows="3" cols="20"></textarea>
+        </div><!--div-->
+
+        <div class="form-group" id="emailtext-block">
+            <label for="emailtext">Text Format</label>
+            <textarea class="form-control" id="emailtext" name="emailtext" rows="3" cols="20"></textarea>
+        </div><!--div-->
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Comment</legend>
+        <div class="form-group">
+            <label for="comment"></label>
+            <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+        </div><!--div-->
+        <span class="err" id="err-comment">
+            Please leave us a comment
+        </span>
+    </fieldset>
+
+    <fieldset>
+        <legend>How did we meet?</legend>
+        <!--<div class="dropdown">-->
+            <select id="met" name="met" onchange="other(this.value);">
+                <option value="none">Select how we met</option>
+                <option value="meet-up">Meet-up</option>
+                <option value="job-fair">Job fair</option>
+                <option value="weNeverMet">We never met</option>
+                <option value="other">Other</option>
+            </select>
+        <!--</div>&lt;!&ndash;div&ndash;&gt;-->
+        <span class="err" id="err-meet">
+            Please select how we met
+        </span>
+        <div id="other-block" class="hide" name="other-block">
+            <textarea  rows="1" ></textarea>
+        </div><!--div-->
+        <span class="err" id="err-met">
+            Please enter how else we met
+        </span>
+
+    </fieldset>
+    <br>
+    <button id="submit" type="submit" class="btn btn-primary">
+        Submit
+    </button>
+
+</form>
+
+</div><!--div-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="scripts/guest.js"></script>
+<script>
+    $("#add").on("click", function() {
+        $("#format").css("display", "block");
+    });
+</script>
+<script>
+    //Show html format when html is picked
+    $("#html").on("click", function() {
+        $("#emailhtml-block").css("display", "block");
+    });
+
+    //hide text format when html is picked
+    $("#html").on("click", function() {
+        $("#emailtext-block").css("display", "none");
+    });
+
+    //Show text format when text is picked
+    $("#text").on("click", function() {
+        $("#emailtext-block").css("display", "block");
+    });
+
+    //hide html format when text is picked
+    $("#text").on("click", function() {
+        $("#emailhtml-block").css("display", "none");
+    });
+
+
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(".dropdown-toggle").dropdown();
+    });
+</script>
+<body/>
+<html/>

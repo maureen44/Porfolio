@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a3cf8c98-eca7-485a-b740-2914dc8295ad" name="GreenRiverDev" url="http://mkariuki.greenriverdev.com">
+        <fileTransfer host="mkariuki.greenriverdev.com" port="18765" rootFolder="/home/mkariuki/public_html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="18765" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="0dc9acba-2639-4aa4-af47-245941385eec" name="GreenRiverDev1" url="http://mkariuki.greenriverdev.com">
+        <fileTransfer host="mkariuki.greenriverdev.com" port="18765" rootFolder="/home/mkariuki/public_html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="18765" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="406d9f94-3d2a-4649-859a-c14f5bdd747c" name="Nightshift-1" url="http://nightshift-1.greenriverdev.com">
+        <fileTransfer host="nightshift-1.greenriverdev.com" port="18765" rootFolder="/home/nightshi/public_html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="18765" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
