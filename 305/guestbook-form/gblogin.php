@@ -5,8 +5,8 @@
 
     // Start a session
     if(isset($_SESSION['username'])) {
-        // Redirect to landing page
-        header('location: gblandingPage.php');
+        // Redirect to admin page
+        header('location: guestbook.php');
     }
     // if the login form has been submitted
     if(isset($_POST['submit'])) {
@@ -24,8 +24,8 @@
             // Store login name in a session variable
             $_SESSION['username'] = $username;
 
-            // Redirect to landing page
-            header("location: gblandingPage.php");
+            // Redirect to admin page
+            header("location: guestbook.php");
         } else {
 
             // Login credentials are incorrect
@@ -42,6 +42,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/gbFavicon1.png">
     <title>Login Page</title>
 </head>
 <body>

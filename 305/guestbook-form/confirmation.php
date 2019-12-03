@@ -1,16 +1,3 @@
-<?php
-/** confirmation.php server-side validation
- *  for guestbook
- *
- * Maureen Kariuki
- *  Nov 16, 2019
- */
-//Turn on error reporting -- this is critical!
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-
-?>
 
 <?php
 /** 305/guestbook

@@ -4,6 +4,9 @@ body {
 .btn-primary {
     background-color: slategrey;
 }
+.card > img {
+    background-color: #ffe484;
+}
 #emailhtml-block {
     display: none;
 }

@@ -2,19 +2,15 @@
 /** 305/guestbook.php
  *  Nov 26, 2019
  */
-//Turn on error reporting -- this is critical!
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 session_start();
 //Start a session
 
-
-/*if (!isset($_SESSION['username'])){
+if (!isset($_SESSION['username'])){
     header('location: gblogin.php');
-}*/
+}
 //If user is not logged in, reroute them to the login page
-include "gbnav.php";
+include "nav.php";
+
 
 ?>
 <!DOCTYPE html>
@@ -25,6 +21,9 @@ include "gbnav.php";
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/gbFavicon1.png">
+
 </head>
 <body>
 <div class="container">
