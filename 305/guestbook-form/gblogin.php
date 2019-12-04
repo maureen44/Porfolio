@@ -6,7 +6,7 @@
     // Start a session
     if(isset($_SESSION['username'])) {
         // Redirect to admin page
-        header('location: guestbook.php');
+        header('location: page1.php');
     }
     // if the login form has been submitted
     if(isset($_POST['submit'])) {

@@ -5,11 +5,11 @@
 session_start();
 //Start a session
 
-if (!isset($_SESSION['username'])){
+if (!isset($_SESSION['username'])) {
     header('location: gblogin.php');
 }
 //If user is not logged in, reroute them to the login page
-include "nav.php";
+include "gbnav.php";
 
 
 ?>
