@@ -8,10 +8,6 @@ session_start();
 if (!isset($_SESSION['username'])) {
     header('location: gblogin.php');
 }
-//If user is not logged in, reroute them to the login page
-include "gbnav.php";
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +23,13 @@ include "gbnav.php";
 </head>
 <body>
 <div class="container">
+    <?php
+    //If user is not logged in, reroute them to the login page
+    include "gbnav.php";
+    ?>
     <h3>Guest Summary</h3>
 
     <?php
-    include "gbnav.php";
     require('/home/mkariuki/connect.php');
 
     //Define the query

@@ -4,9 +4,12 @@
     error_reporting(E_ALL);
 
     // Start a session
+    session_start();
+
+    //If the user is already logged in
     if(isset($_SESSION['username'])) {
         // Redirect to admin page
-        header('location: page1.php');
+        header('location: guestbook.php');
     }
     // if the login form has been submitted
     if(isset($_POST['submit'])) {
