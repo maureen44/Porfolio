@@ -30,7 +30,7 @@ include "nav.php";
     <h3>Guest Summary</h3>
 
     <?php
-
+    include "gbnav.php";
     require('/home/mkariuki/connect.php');
 
     //Define the query
